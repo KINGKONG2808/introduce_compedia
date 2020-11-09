@@ -5,25 +5,59 @@
   padding: 0;
 }
 
+.navbar .navbar-brand {
+  letter-spacing: 0.09em;
+}
+
 .navbar .collapse .navbar-nav {
-  margin: 0 auto;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: auto;
+}
+
+.navbar .collapse .navbar-nav .nav-item {
+  margin: 0 0.5rem;
+  position: relative;
 }
 
 .navbar .collapse .navbar-nav .nav-item.active .nav-link {
   color: #2F80ED;
 }
 
-.navbar .collapse .navbar-nav .nav-item .nav-link {
-  -webkit-transition: all 330ms ease-in-out;
-  transition: all 330ms ease-in-out;
-  border-bottom: 2px solid none;
+.navbar .collapse .navbar-nav .nav-item:not(.nav-item__last-child)::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  border-bottom: 2px solid #2F80ED;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
-.navbar .collapse .navbar-nav .nav-item .nav-link:not(.nav-link__language):hover {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  padding: 10px 20px;
-  border-bottom: 3px solid #2F80ED;
+.navbar .collapse .navbar-nav .nav-item:not(.nav-item__last-child)::after {
+  content: '';
+  position: absolute;
+  top: 0.25rem;
+  left: auto;
+  right: -0.5rem;
+}
+
+.navbar .collapse .navbar-nav .nav-item:not(.nav-item__last-child):hover::before {
+  width: 100%;
+}
+
+.navbar .collapse .navbar-nav .nav-item .nav-link {
+  font-size: 13px;
+  text-decoration: none;
+  color: #000000;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.navbar .collapse .navbar-nav .nav-item .nav-link:hover {
+  color: #2F80ED;
 }
 
 .navbar .collapse .navbar-nav .nav-item .nav-link__language {
@@ -31,13 +65,66 @@
   border-radius: 20px;
   height: 11px;
   width: 12px;
-  margin-top: 12px;
-  margin-left: 11px;
+  margin: 10px;
 }
 
 .navbar .collapse .navbar-nav .nav-item .nav-link__language img {
-  margin-top: -28px;
+  margin-top: -22px;
   margin-left: -6px;
+}
+
+.navbar-light .navbar-toggler {
+  background: none;
+  border: none;
+}
+
+.navbar-light .navbar-toggler:active, .navbar-light .navbar-toggler:focus {
+  outline: 0;
+}
+
+.navbar-light .navbar-toggler .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+  margin: 4px 0 4px 0;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  background: #2F80ED;
+}
+
+.navbar-light .navbar-toggler .icon-bar:nth-of-type(1) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: 10% 10%;
+          transform-origin: 10% 10%;
+}
+
+.navbar-light .navbar-toggler .icon-bar:nth-of-type(2) {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.navbar-light .navbar-toggler .icon-bar:nth-of-type(3) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: 10% 90%;
+          transform-origin: 10% 90%;
+}
+
+.navbar-light .collapsed .icon-bar:nth-of-type(1) {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+.navbar-light .collapsed .icon-bar:nth-of-type(2) {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.navbar-light .collapsed .icon-bar:nth-of-type(3) {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
 }
 
 @media screen and (max-width: 1024px) {
@@ -53,5 +140,43 @@
   .form-inline {
     padding-top: 10px;
   }
+}
+
+#carouselExampleIndicators .carousel-inner .carousel-item img {
+  height: 678px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#carouselExampleIndicators .carousel-inner .carousel-item .carousel-caption {
+  bottom: 26vh;
+  left: 13%;
+  text-align: left;
+}
+
+#carouselExampleIndicators .carousel-inner .carousel-item .carousel-caption h5 {
+  font-size: 48px;
+}
+
+#carouselExampleIndicators .carousel-inner .carousel-item .carousel-caption p {
+  font-size: 24px;
+}
+
+#carouselExampleIndicators .carousel-control-next,
+#carouselExampleIndicators .carousel-control-prev {
+  width: 10%;
+}
+
+@media screen and (max-width: 600px) {
+  #carouselExampleIndicators .carousel-inner .carousel-item img {
+    height: calc(678px / 2);
+  }
+}
+
+body .container-fluid {
+  padding: 0;
 }
 /*# sourceMappingURL=main.css.map */

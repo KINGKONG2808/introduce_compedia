@@ -1,2 +1,8 @@
 @import './config';
 @import './header';
+@import './carousel';
+body {
+    .container-fluid {
+        padding: 0;
+    }
+}
