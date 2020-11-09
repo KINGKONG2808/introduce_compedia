@@ -1,0 +1,50 @@
+.navbar {
+    .collapse {
+        .navbar-nav {
+            margin: 0 auto;
+            .nav-item {
+                &.active {
+                    .nav-link {
+                        color: $primary-color;
+                    }
+                }
+                .nav-link {
+                    transition: all 330ms ease-in-out;
+                    border-bottom: 2px solid none;
+                    &:not(.nav-link__language):hover {
+                        transform: scale(1);
+                        padding: 10px 20px;
+                        border-bottom: 3px solid $primary-color;
+                    }
+                    &__language {
+                        background: red;
+                        border-radius: 20px;
+                        height: 11px;
+                        width: 12px;
+                        margin-top: 12px;
+                        margin-left: 11px;
+                        img {
+                            margin-top: -28px;
+                            margin-left: -6px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .form-inline {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .nav-item__last-child {
+        display: none;
+    }
+    .form-inline {
+        padding-top: 10px;
+    }
+}
