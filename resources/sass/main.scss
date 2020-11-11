@@ -1,8 +1,21 @@
 @import './config';
 @import './header';
 @import './carousel';
+@import './content_introduce';
+@import './technology-life';
 body {
     .container-fluid {
         padding: 0;
     }
+}
+
+.menu-bar {
+    position: fixed;
+    z-index: 1;
+}
+
+.slide-bar,
+.body-content,
+.see-more {
+    position: relative;
 }
