@@ -3,6 +3,9 @@
 @import './carousel';
 @import './content_introduce';
 @import './technology-life';
+@import './resolve-service';
+@import './projects';
+@import './theme-style';
 body {
     .container-fluid {
         padding: 0;
@@ -16,6 +19,8 @@ body {
 
 .slide-bar,
 .body-content,
-.see-more {
+.see-more,
+.resolve-service,
+.project-demo {
     position: relative;
 }

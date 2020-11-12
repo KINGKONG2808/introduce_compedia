@@ -1,10 +1,11 @@
 .navbar {
     &.bg-light {
-        background-color: $background-header !important;
+        background-color: $background-header-default !important;
     }
     &.navbar-fixed-top {
         &.scrolled {
             background-color: $background-header-default !important;
+            border-bottom: 1px solid $bottom-color;
             transition: background-color 100ms linear;
             .collapse {
                 .navbar-nav {
@@ -37,9 +38,9 @@
                             }
                         }
                         input {
-                            color: $secondary-color;
+                            color: $secondary-color-copy;
                             &::placeholder {
-                                color: $secondary-color;
+                                color: $secondary-color-copy;
                                 opacity: 1;
                             }
                         }
@@ -85,21 +86,21 @@
                 .nav-link {
                     font-size: 13px;
                     text-decoration: none;
-                    color: $third-color;
+                    color: $secondary-color;
                     letter-spacing: 0.15em;
-                    text-transform: uppercase;
+                    //text-transform: uppercase;
                     &:hover {
                         color: $primary-color;
                     }
                     &__language {
                         background: red;
                         border-radius: 20px;
-                        height: 11px;
-                        width: 12px;
-                        margin: 10px;
+                        height: 10px;
+                        width: 10px;
+                        margin: 9px;
                         img {
-                            margin-top: -22px;
-                            margin-left: -6px;
+                            margin-top: -1.7em;
+                            margin-left: -0.5em;
                         }
                     }
                 }
@@ -108,7 +109,7 @@
         .form-inline {
             width: 250px;
             .search-function {
-                color: $third-color;
+                color: $secondary-color;
                 margin-left: 210px;
                 &:hover {
                     color: $primary-color;
@@ -116,7 +117,7 @@
             }
             .search-function__input {
                 .search-cancel {
-                    color: $third-color;
+                    color: $secondary-color;
                     padding: 12px 15px 0 0;
                     margin-left: 1.2rem;
                     &:hover {
@@ -130,9 +131,9 @@
                     border-right: none;
                     border-radius: 0;
                     background: transparent;
-                    color: $third-color;
+                    color: $secondary-color-copy;
                     &::placeholder {
-                        color: $third-color;
+                        color: $secondary-color-copy;
                         opacity: 1;
                     }
                 }
@@ -182,6 +183,25 @@
             }
             &:nth-of-type(3) {
                 transform: rotate(0);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .navbar {
+        padding: 1rem 0;
+        .navbar-brand {
+            position: absolute;
+            margin-left: 30rem;
+        }
+        .collapse {
+            .navbar-nav {
+                padding-left: 17rem;
+            }
+            .form-inline {
+                position: absolute;
+                right: 23rem;
             }
         }
     }

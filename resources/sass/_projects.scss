@@ -1,0 +1,68 @@
+.projects {
+    background-color: $background-project;
+    height: 49rem;
+    &__background-image {
+        position: relative;
+        text-align: center;
+        align-items: center;
+        vertical-align: middle;
+        img {
+            margin: 8rem 8rem 8rem -22rem;
+        }
+    }
+    &__content {
+        position: absolute;
+        width: 100%;
+        top: 12rem;
+        .count-project {
+            text-align: right;
+            margin-top: 6.5rem;
+            margin-right: 6rem;
+            h1 {
+                font-size: 7rem;
+                color: $primary-color;
+            }
+            p {
+                font-size: 2.5rem;
+                padding-right: 1rem;
+            }
+        }
+        .feedback-project {
+            h3 {
+                color: $primary-color;
+                font-size: 3rem;
+            }
+            p {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .projects {
+        margin-top: 90vh;
+        &__content {
+            .count-project {
+                margin-top: 9rem;
+                margin-right: 2rem;
+                h1 {
+                    font-size: 5rem;
+                }
+                p {
+                    font-size: 1.5rem;
+                    padding-right: 2rem;
+                }
+            }
+            .feedback-project {
+                margin-top: 3rem;
+                h3 {
+                    font-size: 2rem;
+                }
+                p {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
