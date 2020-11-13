@@ -5,8 +5,10 @@
 @import './technology-life';
 @import './resolve-service';
 @import './projects';
+@import './project-slide';
 @import './theme-style';
 body {
+    overflow-x: hidden;
     .container-fluid {
         padding: 0;
     }
@@ -21,6 +23,8 @@ body {
 .body-content,
 .see-more,
 .resolve-service,
-.project-demo {
+.project-demo,
+.projects-slide {
     position: relative;
+    overflow-x: hidden;
 }
