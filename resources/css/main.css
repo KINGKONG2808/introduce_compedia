@@ -678,10 +678,6 @@
   position: relative;
 }
 
-.projects-slide .container .project-slide__images .carousel-wrap .owl-carousel .owl-stage-outer {
-  max-height: 210px;
-}
-
 .projects-slide .container .project-slide__images .carousel-wrap .owl-carousel .owl-stage-outer .owl-stage .owl-item {
   -webkit-transform: scale(0.7);
           transform: scale(0.7);
@@ -692,10 +688,12 @@
 
 .projects-slide .container .project-slide__images .carousel-wrap .owl-carousel .owl-stage-outer .owl-stage .owl-item .item {
   text-align: center;
+  height: 300px;
 }
 
 .projects-slide .container .project-slide__images .carousel-wrap .owl-carousel .owl-stage-outer .owl-stage .owl-item .item__img {
   width: 90%;
+  height: 100%;
   margin: 10px auto;
   position: relative;
 }
@@ -773,7 +771,7 @@
   position: absolute;
   width: 26px;
   cursor: pointer;
-  top: 82px !important;
+  top: 130px !important;
 }
 
 .projects-slide .container .project-slide__images .carousel-wrap .owl-carousel .owl-nav .nav-btn.prev-slide {
@@ -796,6 +794,20 @@
 
 .projects-slide .container .project-slide__images .carousel-wrap .owl-carousel .owl-dots .owl-dot.active span, .projects-slide .container .project-slide__images .carousel-wrap .owl-carousel .owl-dots .owl-dot:hover span {
   background: #2F80ED;
+}
+
+.my-footer {
+  margin-top: 7rem;
+}
+
+.my-footer__background img {
+  width: 100%;
+  height: 390px;
+}
+
+.my-footer__copyright img {
+  width: 100%;
+  height: 52px;
 }
 
 .no-padding {
@@ -876,7 +888,8 @@ body .container-fluid {
 .see-more,
 .resolve-service,
 .project-demo,
-.projects-slide {
+.projects-slide,
+.footer {
   position: relative;
   overflow-x: hidden;
 }

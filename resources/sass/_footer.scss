@@ -1,0 +1,15 @@
+.my-footer {
+    margin-top: 7rem;
+    &__background {
+        img {
+            width: 100%;
+            height: 390px;
+        }
+    }
+    &__copyright {
+        img {
+            width: 100%;
+            height: 52px;
+        }
+    }
+}

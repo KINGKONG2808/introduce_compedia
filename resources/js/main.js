@@ -119,7 +119,7 @@ function autoPlayCarousel() {
 function hoverToDiaplayContent() {
     var item = $('.center').children();
     item.on('mouseover', function() {
-        $(item).children('.item__img').addClass('display-none').addClass('rotate-y-360');
+        $(item).children('.item__img').addClass('display-none');
         $(item).children('.item__detail').removeClass('display-none');
     });
     item.on('mouseout', function() {

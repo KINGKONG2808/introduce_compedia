@@ -6,6 +6,7 @@
 @import './resolve-service';
 @import './projects';
 @import './project-slide';
+@import './footer';
 @import './theme-style';
 body {
     overflow-x: hidden;
@@ -24,7 +25,8 @@ body {
 .see-more,
 .resolve-service,
 .project-demo,
-.projects-slide {
+.projects-slide,
+.footer {
     position: relative;
     overflow-x: hidden;
 }

@@ -17,7 +17,6 @@
                     position: relative;
                     .owl-carousel {
                         .owl-stage-outer {
-                            max-height: 210px;
                             .owl-stage {
                                 .owl-item {
                                     transform: scale(0.7);
@@ -25,8 +24,10 @@
                                     transition: all .5s;
                                     .item {
                                         text-align: center;
+                                        height: 300px;
                                         &__img {
                                             width: 90%;
+                                            height: 100%;
                                             margin: 10px auto;
                                             position: relative;
                                             img {
@@ -91,7 +92,7 @@
                                 position: absolute;
                                 width: 26px;
                                 cursor: pointer;
-                                top: 82px !important;
+                                top: 130px !important;
                                 &.prev-slide {
                                     background: url('nav-icon.png') no-repeat scroll 0 0;
                                     left: -33px;
