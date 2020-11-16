@@ -778,7 +778,7 @@
 }
 
 .projects-slide .container .project-slide__images .carousel-wrap .owl-carousel .owl-nav .nav-btn.prev-slide {
-  background: url("nav-icon.png") no-repeat scroll 0 0;
+  background: url("../img/nav-icon.png") no-repeat scroll 0 0;
   left: -33px;
 }
 
@@ -787,7 +787,7 @@
 }
 
 .projects-slide .container .project-slide__images .carousel-wrap .owl-carousel .owl-nav .nav-btn.next-slide {
-  background: url("nav-icon.png") no-repeat scroll -24px 0px;
+  background: url("../img/nav-icon.png") no-repeat scroll -24px 0px;
   right: -33px;
 }
 

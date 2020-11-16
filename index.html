@@ -23,7 +23,10 @@
         new WOW().init();
     </script>
     <!--Import custom css-->
-    <link rel="stylesheet" href="resources/css/main.css?v=1.0" />
+    <!--for dev-->
+    <!-- <link rel="stylesheet" href="resources/css/main.css?v=1.0" /> -->
+    <!--for deploy-->
+    <link rel="stylesheet" href="resources/dist/css/main.min.css" />
 </head>
 
 <body>
@@ -458,7 +461,7 @@
         <div class="container-fluid">
             <div class="my-footer">
                 <div class="my-footer__background">
-                    <img src="resources/img/footer.png" alt="footer" />
+                    <img src="resources/img/footer-min.png" alt="footer" />
                 </div>
                 <div class="my-footer__content">
                     <div class="container">
@@ -575,7 +578,7 @@
             </div>
             <div class="my-copyright">
                 <div class="my-copyright__background">
-                    <img src="resources/img/copyright.png" alt="copyright" />
+                    <img src="resources/img/copyright-min.png" alt="copyright" />
                 </div>
                 <div class="my-copyright__content">
                     <div class="container">
@@ -603,9 +606,12 @@
     <!--Import bootstrap js-->
     <script src="resources/vender/bootstrap/js/bootstrap.min.js"></script>
     <!--Import owl js-->
-    <script src="resources/js/owl.carousel.min.js"></script>
+    <script src="resources/vender/bootstrap/js/owl.carousel.js"></script>
     <!--Import custom js-->
-    <script src="resources/js/main.js?v=1.0"></script>
+    <!--for dev-->
+    <!-- <script src="resources/js/main.js?v=1.0"></script> -->
+    <!--for deploy-->
+    <script src="resources/dist/js/main.min.js?v=1.0"></script>
 </body>
 
 </html>

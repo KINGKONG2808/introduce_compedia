@@ -1,36 +1,39 @@
 'use strict';
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var uglifycss = require('gulp-uglifycss');
-
-var pathSass = './resources/sass/*.scss';
-var pathCss = './resources/css/*.css';
-var pathOutputCss = './dist';
+// css min
+var cssmin = require('gulp-cssmin');
+var rename = require('gulp-rename');
+// js min
+var jsmin = require('gulp-jsmin');
+var rename = require('gulp-rename');
 
 // task for sass
 gulp.task('sass', function() {
     return gulp.src('./resources/sass/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./dist/css'));
+        .pipe(gulp.dest('./resources/dist/css'));
 });
 
 // minify css file
-gulp.task('css', function() {
-    gulp.src('./dist/css/*.css')
-        .pipe(uglifycss({
-            "maxLineLen": 80,
-            "uglyComments": true
-        }))
-        .pipe(gulp.dest('./dist/css'));
+gulp.task('cssmin', function(done) {
+    gulp.src('./resources/dist/css/*.css')
+        .pipe(cssmin())
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest('./resources/dist/css'));
+    done();
 });
 
-gulp.task('run', gulp.series('sass', 'css'));
-gulp.task('watch', function() {
-    gulp.watch(pathSass, ['sass']);
-    gulp.watch(pathCss, ['css']);
+// minify js file
+gulp.task('jsmin', function(done) {
+    gulp.src('./resources/js/*.js')
+        .pipe(jsmin())
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest('./resources/dist/js'));
+    done();
 });
 
-// task for rename
-gulp.task('default', gulp.series('run', 'watch'), function() {
+gulp.task('run', gulp.series(['sass', 'cssmin', 'jsmin']));
 
-});
+// main
+gulp.task('default', gulp.series(['run']));
