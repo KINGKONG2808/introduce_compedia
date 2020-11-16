@@ -572,6 +572,9 @@
     padding-right: 1rem;
     padding-left: 0.5rem;
   }
+  .resolve-service .container .perfect-service__image-demo {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 575px) {
@@ -796,8 +799,18 @@
   background: #2F80ED;
 }
 
+@media screen and (max-width: 768px) {
+  .projects-slide .container .project-slide__images {
+    margin-left: -8rem;
+  }
+}
+
 .my-footer {
   margin-top: 7rem;
+}
+
+.my-footer__background {
+  position: relative;
 }
 
 .my-footer__background img {
@@ -805,9 +818,194 @@
   height: 390px;
 }
 
-.my-footer__copyright img {
+.my-footer__content {
+  position: absolute;
+  width: 100%;
+  color: #ffffff;
+  background: transparent;
+  bottom: 7rem;
+}
+
+.my-footer__content .container {
+  padding: 0;
+}
+
+.my-footer__content .container .compedia-infor__detail p {
+  padding: 1rem 7rem 1rem 0;
+  margin: 0;
+}
+
+.my-footer__content .container .compedia-infor__link p {
+  margin: 0;
+}
+
+.my-footer__content .container .compedia-infor__link p a {
+  color: #ffffff;
+  padding: 0 0.5rem;
+}
+
+.my-footer__content .container .compedia-infor__link p a:hover {
+  cursor: pointer;
+  color: #2F80ED;
+  text-decoration: none;
+}
+
+.my-footer__content .container .compedia-linked__label h5 {
+  border-bottom: 2px solid transparent;
+  position: relative;
+}
+
+.my-footer__content .container .compedia-linked__label h5::after {
+  content: '';
+  background: -webkit-gradient(linear, left top, right top, from(#2F80ED), to(#c4ecff29));
+  background: linear-gradient(to right, #2F80ED, #c4ecff29);
+  display: block;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: -3px;
+}
+
+.my-footer__content .container .compedia-linked__content {
+  padding: 0.5rem 0;
+}
+
+.my-footer__content .container .compedia-linked__content a {
+  color: #ffffff;
+}
+
+.my-footer__content .container .compedia-linked__content a:hover {
+  color: #2F80ED;
+  cursor: pointer;
+}
+
+.my-footer__content .container .compedia-technology__label h5 {
+  border-bottom: 2px solid transparent;
+  position: relative;
+}
+
+.my-footer__content .container .compedia-technology__label h5::after {
+  content: '';
+  background: -webkit-gradient(linear, left top, right top, from(#2F80ED), to(#c4ecff29));
+  background: linear-gradient(to right, #2F80ED, #c4ecff29);
+  display: block;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: -3px;
+}
+
+.my-footer__content .container .compedia-technology__tech {
+  padding: 0.5rem 0;
+}
+
+.my-footer__content .container .compedia-technology__tech p {
+  margin: 0;
+  color: #ffffff;
+}
+
+.my-footer__content .container .compedia-register__label h5 {
+  border-bottom: 2px solid transparent;
+  position: relative;
+}
+
+.my-footer__content .container .compedia-register__label h5::after {
+  content: '';
+  background: -webkit-gradient(linear, left top, right top, from(#2F80ED), to(#c4ecff29));
+  background: linear-gradient(to right, #2F80ED, #c4ecff29);
+  display: block;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: -3px;
+}
+
+.my-footer__content .container .compedia-register__form p {
+  margin: 0;
+  padding: 0.5rem 0 1rem 0;
+  color: #ffffff;
+}
+
+.my-footer__content .container .compedia-register__form .form-group__input {
+  color: #ffffff;
+  background: transparent;
+  border: 1px solid #ffffff;
+}
+
+.my-footer__content .container .compedia-register__form .form-group__input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.my-footer__content .container .compedia-register__form .form-group__input:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.my-footer__content .container .compedia-register__form .form-group__input::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.my-footer__content .container .compedia-register__form .form-group__input::placeholder {
+  color: #ffffff;
+}
+
+.my-footer__content .container .compedia-register__form .form-group__input:focus {
+  border: 1px solid #2F80ED;
+}
+
+.my-footer__content .container .compedia-register__form .btn-custom {
+  width: 61px;
+  height: 36px;
+}
+
+.my-copyright__background {
+  position: relative;
+}
+
+.my-copyright__background img {
   width: 100%;
   height: 52px;
+}
+
+.my-copyright__content {
+  position: absolute;
+  width: 100%;
+  color: #ffffff;
+  background: #000000;
+  bottom: 0.8rem;
+}
+
+.my-copyright__content .container {
+  padding: 0;
+}
+
+@media screen and (max-width: 992px) {
+  .my-footer__background img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    overflow: hidden;
+  }
+  .my-footer__content .container {
+    padding: 0 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .my-footer__background img {
+    height: 750px;
+  }
+  .my-footer__content .container {
+    padding-left: 10rem;
+    padding-right: 0;
+  }
+  .my-footer__content .container .compedia-infor,
+  .my-footer__content .container .compedia-linked,
+  .my-footer__content .container .compedia-technology,
+  .my-footer__content .container .compedia-register {
+    margin: 1rem 0;
+  }
+  .my-copyright__content .container p {
+    font-size: 12px;
+  }
 }
 
 .no-padding {

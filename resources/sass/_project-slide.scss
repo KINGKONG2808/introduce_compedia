@@ -125,3 +125,15 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .projects-slide {
+        .container {
+            .project-slide {
+                &__images {
+                    margin-left: -8rem;
+                }
+            }
+        }
+    }
+}

@@ -1,15 +1,171 @@
 .my-footer {
     margin-top: 7rem;
     &__background {
+        position: relative;
         img {
             width: 100%;
             height: 390px;
         }
     }
-    &__copyright {
+    &__content {
+        position: absolute;
+        width: 100%;
+        color: $third-color;
+        background: transparent;
+        bottom: 7rem;
+        .container {
+            padding: 0;
+            .compedia-infor {
+                &__detail {
+                    p {
+                        padding: 1rem 7rem 1rem 0;
+                        margin: 0;
+                    }
+                }
+                &__link {
+                    p {
+                        margin: 0;
+                        a {
+                            color: $third-color;
+                            padding: 0 0.5rem;
+                            &:hover {
+                                cursor: pointer;
+                                color: $primary-color;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .compedia-linked {
+                &__label {
+                    h5 {
+                        @include set-border-bottom-linear;
+                    }
+                }
+                &__content {
+                    padding: 0.5rem 0;
+                    a {
+                        color: $third-color;
+                        &:hover {
+                            color: $primary-color;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .compedia-technology {
+                &__label {
+                    h5 {
+                        @include set-border-bottom-linear;
+                    }
+                }
+                &__tech {
+                    padding: 0.5rem 0;
+                    p {
+                        margin: 0;
+                        color: $third-color;
+                    }
+                }
+            }
+            .compedia-register {
+                &__label {
+                    h5 {
+                        @include set-border-bottom-linear;
+                    }
+                }
+                &__form {
+                    p {
+                        margin: 0;
+                        padding: 0.5rem 0 1rem 0;
+                        color: $third-color;
+                    }
+                    .form-group {
+                        &__input {
+                            color: $third-color;
+                            background: transparent;
+                            border: 1px solid $third-color;
+                            &::placeholder {
+                                color: $third-color;
+                            }
+                            &:focus {
+                                border: 1px solid $primary-color;
+                            }
+                        }
+                    }
+                    .btn-custom {
+                        width: 61px;
+                        height: 36px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.my-copyright {
+    &__background {
+        position: relative;
         img {
             width: 100%;
             height: 52px;
+        }
+    }
+    &__content {
+        position: absolute;
+        width: 100%;
+        color: $third-color;
+        background: #000000;
+        bottom: 0.8rem;
+        .container {
+            padding: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .my-footer {
+        &__background {
+            img {
+                object-fit: cover;
+                overflow: hidden;
+            }
+        }
+        &__content {
+            .container {
+                padding: 0 2rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .my-footer {
+        &__background {
+            img {
+                height: 750px;
+            }
+        }
+        &__content {
+            .container {
+                padding-left: 10rem;
+                padding-right: 0;
+                .compedia-infor,
+                .compedia-linked,
+                .compedia-technology,
+                .compedia-register {
+                    margin: 1rem 0;
+                }
+            }
+        }
+    }
+    .my-copyright {
+        &__content {
+            .container {
+                p {
+                    font-size: 12px;
+                }
+            }
         }
     }
 }

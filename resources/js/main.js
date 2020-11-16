@@ -63,11 +63,11 @@ function searchClick(e) {
             $('.collapse').addClass('padding-1rem');
             $('.form-inline').css('width', '100%').css('left', '26rem');
             $('.search-function__input').css('width', '100%');
-            $('input').css('width', '55.5%');
+            $('.nav-search').css('width', '55.5%');
         }
 
         $('.search-function__input').show();
-        $('input').focus();
+        $('.nav-search').focus();
     } else {
         $('.search-function').show();
 
@@ -77,7 +77,7 @@ function searchClick(e) {
             $('.collapse').removeClass('padding-1rem');
             $('.form-inline').css('width', '').css('left', '');
             $('.search-function__input').css('width', '');
-            $('input').css('width', '');
+            $('.nav-search').css('width', '');
         }
 
         $('.search-function__input').hide();
@@ -88,7 +88,6 @@ function searchClick(e) {
 function autoPlayCarousel() {
     $('.owl-carousel').owlCarousel({
         margin: 10,
-        nav: true,
         loop: true,
         center: true,
         autoplay: true,
@@ -99,12 +98,35 @@ function autoPlayCarousel() {
         responsive: {
             0: {
                 items: 1,
+                nav: false
             },
-            600: {
-                items: 3,
+            480: {
+                items: 1,
+                nav: false
             },
-            1000: {
+            768: {
+                items: 1,
+                nav: false
+            },
+            992: {
+                items: 1,
+                nav: false
+            },
+            1024: {
                 items: 3,
+                nav: false
+            },
+            1170: {
+                items: 3,
+                nav: true
+            },
+            1366: {
+                items: 3,
+                nav: true
+            },
+            1920: {
+                items: 3,
+                nav: true
             }
         }
     });
