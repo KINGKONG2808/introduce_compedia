@@ -10,4 +10,4 @@
         * npm install --save-dev gulp-jsmin
     + Build SASS/CSS/JS and strategies for cache busting:
         * Step 1: cd to folder have gulpfile.js file
-        * Step 2: run command 'run'
+        * Step 2: run command 'gulp'
