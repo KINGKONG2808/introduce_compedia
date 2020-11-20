@@ -110,6 +110,7 @@
                             }
                         }
                         .owl-dots {
+                            margin-top: 1rem;
                             .owl-dot {
                                 &.active,
                                 &:hover {
@@ -126,12 +127,14 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
     .projects-slide {
         .container {
             .project-slide {
                 &__images {
-                    margin-left: -8rem;
+                    .carousel-wrap {
+                        width: auto;
+                    }
                 }
             }
         }

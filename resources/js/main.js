@@ -18,8 +18,9 @@ $(document).ready(function() {
         }
     );
     scrollPage();
-    autoPlayCarousel();
-    hoverToDiaplayContent();
+    autoPlayCarousel('.my-projects-slide', 3000, true, 3);
+    autoPlayCarousel('.my-partners-slides', 3000, false, 4);
+    autoPlayCarousel('.my-feedback-slide', 3000, false, 3);
 });
 
 // press esc to exit search form
@@ -85,15 +86,17 @@ function searchClick(e) {
 }
 
 // override function owl carousel
-function autoPlayCarousel() {
-    $('.owl-carousel').owlCarousel({
+function autoPlayCarousel(className, time, check, item) {
+    var owl = $(className);
+
+    owl.owlCarousel({
         margin: 10,
         loop: true,
         center: true,
         autoplay: true,
-        autoplayTimeout: 3000,
+        autoplayTimeout: time,
         autoplayHoverPause: true,
-        navText: ["<div class='nav-btn prev-slide'></div>", "<div class='nav-btn next-slide'></div>"],
+        navText: check ? ["<div class='nav-btn prev-slide'></div>", "<div class='nav-btn next-slide'></div>"] : [],
         responsiveClass: true,
         responsive: {
             0: {
@@ -113,33 +116,34 @@ function autoPlayCarousel() {
                 nav: false
             },
             1024: {
-                items: 3,
+                items: item,
                 nav: false
             },
             1170: {
-                items: 3,
+                items: item,
                 nav: true
             },
             1366: {
-                items: 3,
+                items: item,
                 nav: true
             },
             1920: {
-                items: 3,
+                items: item,
                 nav: true
             }
         }
     });
-    var owl = $('.owl-carousel');
-    owl.owlCarousel();
     owl.on('changed.owl.carousel', function() {
-        hoverToDiaplayContent();
+        hoverToDiaplayContent(className);
     });
 }
 
 // hover to display content owl causel
-function hoverToDiaplayContent() {
-    var item = $('.center').children();
+function hoverToDiaplayContent(className) {
+    if (className === '.my-feedback-slide') {
+        return;
+    }
+    var item = $('.my-projects-slide .center').children();
     item.on('mouseover', function() {
         $(item).children('.item__img').addClass('display-none');
         $(item).children('.item__detail').removeClass('display-none');

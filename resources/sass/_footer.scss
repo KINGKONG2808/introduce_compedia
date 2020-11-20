@@ -1,20 +1,11 @@
 .my-footer {
+    background-image: url('../img/footer-min.png');
+    background-size: 100%;
     margin-top: 7rem;
-    &__background {
-        position: relative;
-        img {
-            width: 100%;
-            height: 390px;
-        }
-    }
-    &__content {
-        position: absolute;
-        width: 100%;
-        color: $third-color;
-        background: transparent;
-        bottom: 7rem;
-        .container {
-            padding: 0;
+    color: $third-color;
+    .container {
+        >.row {
+            padding: 4rem 2rem;
             .compedia-infor {
                 &__detail {
                     p {
@@ -96,6 +87,23 @@
                     .btn-custom {
                         width: 61px;
                         height: 36px;
+                        background: transparent !important;
+                        border: 1px solid $third-color;
+                        &.hvr-rectangle-out {
+                            overflow: hidden;
+                            &::before {
+                                background: $primary-color;
+                                border-radius: 2px;
+                                border: 1px solid $primary-color;
+                            }
+                            &:active,
+                            &:focus,
+                            &:hover {
+                                color: $third-color;
+                                border: 1px solid $primary-color;
+                                cursor: pointer;
+                            }
+                        }
                     }
                 }
             }
@@ -104,66 +112,23 @@
 }
 
 .my-copyright {
-    &__background {
-        position: relative;
-        img {
-            width: 100%;
-            height: 52px;
-        }
-    }
-    &__content {
-        position: absolute;
-        width: 100%;
-        color: $third-color;
-        background: #000000;
-        bottom: 0.8rem;
-        .container {
-            padding: 0;
+    background-image: url('../img/copyright-min.png');
+    background-size: 100%;
+    color: $third-color;
+    background: #000000;
+    .container {
+        >.row {
+            padding: 1rem;
         }
     }
 }
 
-@media screen and (max-width: 992px) {
-    .my-footer {
-        &__background {
-            img {
-                object-fit: cover;
-                overflow: hidden;
-            }
-        }
-        &__content {
-            .container {
-                padding: 0 2rem;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .my-footer {
-        &__background {
-            img {
-                height: 750px;
-            }
-        }
-        &__content {
-            .container {
-                padding-left: 10rem;
-                padding-right: 0;
-                .compedia-infor,
-                .compedia-linked,
-                .compedia-technology,
-                .compedia-register {
-                    margin: 1rem 0;
-                }
-            }
-        }
-    }
+@media screen and (max-width: 576px) {
     .my-copyright {
-        &__content {
-            .container {
+        .container {
+            >.row {
                 p {
-                    font-size: 12px;
+                    font-size: 0.6rem;
                 }
             }
         }

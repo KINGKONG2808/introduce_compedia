@@ -108,6 +108,11 @@
         }
         .form-inline {
             width: 250px;
+            i {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
             .search-function {
                 color: $secondary-color;
                 margin-left: 210px;
